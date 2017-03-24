@@ -10,5 +10,13 @@
   $app->get('/', function() use ($app) {
       return $app['twig']->render('index.html.twig');
 });
-  return $app;
+
+  $app->post('/results', function() use ($app) {
+       $searchInput = $_POST['input'];
+       $finderInput = $_POST['findInput'];
+       $repeatCounters = new RepeatCounter;
+       $stringWord = $repeatCounters->countRepeats($searchInput, $finderInput);
+       return $app['twig']->render('index.html.twig', array('wordSentence' => $stringWord, 'input' => $searchInput, 'findInput' => $finderInput));
+   });
+   return $app;
 ?>

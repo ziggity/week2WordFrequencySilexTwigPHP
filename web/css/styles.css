@@ -1,0 +1,43 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: blue;
+}
+
+li {
+    float: left;
+    border-right:2px dashed #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline;;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: blue;
+}
+h1,h4,h3,h2{
+  color: black;
+
+    text-shadow: 1px 1px 4px black, 0 0 125px silver, 0 0 15px white;
+
+}
+body {
+    background-image: url("http://images.amcnetworks.com/bbcamerica.com/wp-content/uploads/2013/06/Sherlock_Quiz_1600x720.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+}

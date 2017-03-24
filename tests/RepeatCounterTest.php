@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__.'/../src/RepeatCounter.php';
-    class RepeatCounterTests extends PHPUnit_Framework_TestCase
+    class RepeatCounterTest extends PHPUnit_Framework_TestCase
     {
         function test_countRepeat_1()
         {
