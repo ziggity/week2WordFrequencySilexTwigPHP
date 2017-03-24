@@ -12,12 +12,12 @@
       return $app['twig']->render('index.html.twig');
 });
 
-  $app->post('/results', function() use ($app) {
-       $searchInput = $_POST['input'];
-       $finderInput = $_POST['findInput'];
-       $repeatCounters = new RepeatCounter;
-       $stringWord = $repeatCounters->countRepeats($searchInput, $finderInput);
-       return $app['twig']->render('index.html.twig', array('wordSentence' => $stringWord, 'input' => $searchInput, 'findInput' => $finderInput));
-   });
+$app->post('/results', function() use ($app) {
+        $search = $_POST['searchInput'];
+        $find = $_POST['findInput'];
+        $repeat = new RepeatCounter;
+        $word = $repeat->countRepeats($search, $find);
+        return $app['twig']->render('results.html.twig', array('word' => $word, 'search' => $search, 'find' => $find));
+    });
    return $app;
 ?>

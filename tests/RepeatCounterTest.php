@@ -28,12 +28,23 @@
         {
           //Arrange
           $userInput = 'This is one crazy cat, huh Watson is there another cat over there, too';
+          $finder = 'cat cat';
+          $test_RepeatCounter = new RepeatCounter;
+          //Act
+          $result = $test_RepeatCounter->countRepeats($userInput, $finder);
+          //Assert
+          $this->assertEquals(2, $result);
+        }
+        function test_countRepeat_4()
+        {
+          //Arrange
+          $userInput = 'This is a nice cat, I love cats so much';
           $finder = 'cat';
           $test_RepeatCounter = new RepeatCounter;
           //Act
           $result = $test_RepeatCounter->countRepeats($userInput, $finder);
           //Assert
-          $this->assertEquals(1, $result);
+          $this->assertEquals(2, $result);
         }
 
     }

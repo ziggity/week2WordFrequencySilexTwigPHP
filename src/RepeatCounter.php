@@ -1,13 +1,12 @@
 <?php
     class RepeatCounter {
-        function countRepeats($userInput, $finder)
+        function countRepeats($searchInput, $findInput)
         {
-            $wordCount = 0;
-            $string = explode(" ", $userInput);
-            $finder= strtolower($finder);
-            foreach ($string as $word){
-              $word = strtolower($word);
-              if ($word == $finder) {
+          $wordCount = 0;
+            $search_string = explode(" ", $searchInput);
+            $findInput= strtolower($findInput);
+            foreach ($search_string as $word){
+              if ($findInput == $word){
                 $wordCount++;
               }
             }
