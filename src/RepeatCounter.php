@@ -4,11 +4,10 @@
         {
             $wordCount = 0;
             $string = explode(" ", $userInput);
-            $finder = strtolower($finder);
-
-            foreach ($string as $index => $word){
+            $finder= strtolower($finder);
+            foreach ($string as $word){
               $word = strtolower($word);
-              if ($word == $finder){
+              if ($word == $finder) {
                 $wordCount++;
               }
             }
