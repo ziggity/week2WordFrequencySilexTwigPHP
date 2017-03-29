@@ -6,6 +6,7 @@
             $search_string = explode(" ", $searchInput);
             $findInput= strtolower($findInput);
             foreach ($search_string as $word){
+              $word = strtolower($word);
               if ($findInput == $word){
                 $wordCount++;
               }
