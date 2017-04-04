@@ -9,6 +9,9 @@
 _A webapp built with silex that returns how frequent a word appears in a given string. A user inputs a word and the string of words to check it against, only finds full word matches, no partial matches._
 
 ##Specs
+* _Spec zero: Return 0 if the searched word is not in the string input._
+* _input: Johnny is awesome! Search string: Mike's good guy._
+* _output: 0_
 * _Spec one: Return 1 if the two input words match exactly as written_
 * _Input: User's Search Input: "awesome" Find String Input: "awesome"
 Output: 1_
@@ -18,6 +21,9 @@ Output: 1_
 * _Spec three:Ignore partial matches_
 * _Input: Search: "Totally radical dude!", Find: "rad"_
 * _Output: 0_
+* _Spec four:program should show a match if search input has capitalization)_
+* _Input: Search: "Totally radical dude!", Find: "totally"_
+* _Output: 1_
 
 ## Git hub link:
 * https://github.com/ziggity/week2WordFrequencySilexTwigPHP.git
