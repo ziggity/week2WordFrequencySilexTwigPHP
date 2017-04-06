@@ -6,6 +6,8 @@
             $search_string = explode(" ", $searchInput);
             $findInput= strtolower($findInput);
             foreach ($search_string as $word){
+              $whatToRemove = array("?","!",",",";");
+              $word = str_replace($whatToRemove, "", $word);
               $word = strtolower($word);
               if ($findInput == $word){
                 $wordCount++;
